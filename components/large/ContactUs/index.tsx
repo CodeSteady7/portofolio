@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ContactUs() {
   return (
-    <div className='pt-12 px-32 min-h-screen  relative'>
+    <div className='pt-12 px-32 min-h-screen  relative lg:px-28 md:px-20'>
       <div className='pb-8 flex justify-center '>
         <h2 className='text-2xl '>
           <span className='text-blue-700 font-semibold'>04.</span>
@@ -11,8 +11,11 @@ export default function ContactUs() {
         </h2>
       </div>
       <div className='flex justify-center  '>
-        <div className='w-[60%] items-center text-center '>
-          <span className='font-medium'>
+        <div
+          className='w-[60%] items-center text-center 
+        md:w-[80%] xm:w-[100%] '
+        >
+          <span className='font-medium text-[25px] sm:text-[20px]'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
             esse error labore officia repudiandae magnam laboriosam illum,
             voluptate quos ab soluta facilis! Voluptatibus eos, deleniti
