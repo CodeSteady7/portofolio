@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import Link from "next/link";
+import { useState } from "react";
 
 export default function PortofolioProject() {
   const [noOfElement, setNoOfElement] = useState(3);
@@ -6,50 +7,30 @@ export default function PortofolioProject() {
     title: string;
     description: string;
     unix: string;
+    link?: string;
   }
 
   let listdata: DataTypeContent[] = [
     {
       title: "WebsiteGame",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum natus voluptate nostrum.",
+        "The website is integrated with the API from the back end using a web service with Node JS, this website is used to fill in game vouchers",
       unix: "NextJs, ReactJs, Nodejs",
+      link: "https://webgame.webdevgroupid.com",
     },
     {
-      title: "WebsiteGame",
+      title: "E-Commerce",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum natus voluptate nostrum.",
-      unix: "NextJs, ReactJs, Nodejs",
+        "Integrated e-commerce website using React JS on the front end and Node JS on the back end",
+      unix: " ReactJs, Nodejs",
+      link: "",
     },
     {
-      title: "WebsiteGame",
+      title: "UI GPT-3 OpenAI",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum natus voluptate nostrum.",
-      unix: "NextJs, ReactJs, Nodejs",
-    },
-    {
-      title: "WebsiteGame",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum natus voluptate nostrum.",
-      unix: "NextJs, ReactJs, Nodejs",
-    },
-    {
-      title: "WebsiteGame",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum natus voluptate nostrum.",
-      unix: "NextJs, ReactJs, Nodejs",
-    },
-    {
-      title: "WebsiteGame",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum natus voluptate nostrum.",
-      unix: "NextJs, ReactJs, Nodejs",
-    },
-    {
-      title: "WebsiteGame",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum natus voluptate nostrum.",
-      unix: "NextJs, ReactJs, Nodejs",
+        "The responsive website UI display is built only on the front end using React JS",
+      unix: "ReactJs",
+      link: "http://openai-ui.webdevgroupid.com/",
     },
   ];
 
@@ -62,10 +43,10 @@ export default function PortofolioProject() {
   };
 
   return (
-    <div className='mt-20 px-32 min-h-screen xlx:px-10'>
+    <div className='mt-20 px-32 min-h-screen xlx:px-10 bg-white'>
       <div className='pb-8 flex flex-row justify-center'>
         <h2 className='text-2xl '>
-          <span className='text-blue-700 font-semibold'>03.</span>
+          <span className=' font-semibold'>03.</span>
           {"  "}
           <span className='text-3xl font-bold'>My Project</span>
         </h2>
@@ -83,12 +64,14 @@ export default function PortofolioProject() {
                   {item.unix}
                 </span>
                 <div className='absolute bottom-8 right-8 bg-blue-500 py-1 px-6 rounded-md '>
-                  <a
-                    type='button'
-                    className='text-white font-medium text-[15px] '
-                  >
-                    View
-                  </a>
+                  <Link legacyBehavior href={item.link}>
+                    <a
+                      type='button'
+                      className='text-white font-medium text-[15px] '
+                    >
+                      View
+                    </a>
+                  </Link>
                 </div>
               </div>
             </>
@@ -98,7 +81,7 @@ export default function PortofolioProject() {
       <div className='flex flex-row justify-center '>
         <div
           className={` flex justify-center mt-10 w-[8rem] bg-[#0A8AF3] py-2 px-3 text-white rounded-md text-lg font-semibold hover:opacity-70 ${
-            noOfElement <= listdata.length ? "" : "hidden"
+            noOfElement < listdata.length ? "" : "hidden"
           }`}
           onClick={() => LoadMore()}
         >

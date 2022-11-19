@@ -1,11 +1,12 @@
 import React from "react";
 
 export default function ContactUs() {
+  // relative
   return (
-    <div className='pt-12 px-32 min-h-screen  relative lg:px-28 md:px-20'>
+    <div className='pt-12 px-32 min-h-screen lg:px-28 md:px-20 '>
       <div className='pb-8 flex justify-center '>
         <h2 className='text-2xl '>
-          <span className='text-blue-700 font-semibold'>04.</span>
+          <span className=' font-semibold'>04.</span>
           {"  "}
           <span className='text-3xl font-bold'>Get In Touch</span>
         </h2>
@@ -26,13 +27,6 @@ export default function ContactUs() {
               Say Hello
             </button>
           </div>
-        </div>
-      </div>
-      <div className='flex justify-center'>
-        <div className='absolute bottom-8'>
-          <span className='font-medium italic'>
-            Designed & Built by Chairul Ikhsan @2022
-          </span>
         </div>
       </div>
     </div>

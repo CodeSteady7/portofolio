@@ -29,6 +29,16 @@ export default function ProfileContent() {
             My focus right now is making a website that looks attractive and
             looks alive.
           </p>
+          <p className='text-left text-[25px] text-gray-700 sm:text-[20px] pt-4'>
+            Here are a few technologies I’ve been working with recently:
+          </p>
+
+          <ul className=' pl-10 grid grid-cols-2 gap-2  list-disc text-left text-[20px] text-gray-700 sm:text-[20px] pt-4'>
+            <li>Javascript</li>
+            <li>React JS</li>
+            <li>Node JS</li>
+            <li>TypeScript</li>
+          </ul>
         </div>
         <div className='flex md:justify-center max-w-[40%] md:max-w-[80%]  md:items-center md:ml-[40px] '>
           <div>

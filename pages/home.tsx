@@ -29,6 +29,15 @@ export default function Home() {
         <PortofolioProject />
         {/* contact us*/}
         <ContactUs />
+
+        {/* footer */}
+        <div className='flex justify-center pb-10'>
+          <div className=''>
+            <span className='font-medium italic'>
+              Designed & Built by Chairul Ikhsan @2022
+            </span>
+          </div>
+        </div>
       </div>
     </>
   );

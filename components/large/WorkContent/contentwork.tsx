@@ -1,7 +1,6 @@
 import { useState } from "react";
 import BtnWork from "./btnWork";
 import ContentWorkTab from "./contentWorkTab";
-import { DataTypeContentWorkTab } from "./contentWorkTab";
 
 export default function ContentWork() {
   const [onTabClick, setOnTabClick] = useState("muslimlife");
@@ -25,11 +24,6 @@ export default function ContentWork() {
             onClick={() => onSetClick("pag")}
             active={onTabClick === "pag" ? setActive : ""}
           />
-          <BtnWork
-            title='tokopedia'
-            onClick={() => onSetClick("tokopedia")}
-            active={onTabClick === "tokopedia" ? setActive : ""}
-          />
         </ul>
       </div>
       <div className='pl-10'>
@@ -47,18 +41,7 @@ export default function ContentWork() {
         {onTabClick === "pag" ? (
           <ContentWorkTab
             title='Full Stack Developer'
-            date='01 Mai 2022 - Today'
-            description='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci
-          deleniti enim dolores aperiam suscipit ea ad facilis totam saepe doloribus obcaecati repudiandae animi eveniet vitae veniam culpa
-          dicta, numquam magni.'
-          />
-        ) : (
-          ""
-        )}
-        {onTabClick === "tokopedia" ? (
-          <ContentWorkTab
-            title='Front End Developer'
-            date='07 Oktober 2023'
+            date='01 Mai 2022 - Now'
             description='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci
           deleniti enim dolores aperiam suscipit ea ad facilis totam saepe doloribus obcaecati repudiandae animi eveniet vitae veniam culpa
           dicta, numquam magni.'
